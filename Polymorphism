@@ -1,0 +1,70 @@
+/*We can achieve polymorphism in Java using the following ways:
+#1. Method Overriding
+#2. Method Overloading
+#3. Operator Overloading*/
+
+// thru Method Overriding
+
+class Language {
+  public void displayInfo() {
+    System.out.println("Common English Language");
+  }
+}
+
+class Java extends Language {
+  public void displayInfo() {
+    System.out.println("Java Programming Language");
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+
+    Java j1 = new Java();
+    j1.displayInfo();
+
+    Language l1 = new Language();
+    l1.displayInfo();
+  }
+}
+
+// thru Method Overloading
+
+class Pattern {
+  public void display() {
+    for (int i = 0; i < 10; i++) {
+      System.out.print("*");
+    }
+  }
+
+  public void display(char symbol) {
+    for (int i = 0; i < 10; i++) {
+      System.out.print(symbol);
+    }
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+    Pattern d1 = new Pattern();
+
+    d1.display();
+    System.out.println("\n");
+
+    d1.display('#');
+  }
+}
+
+// thru Method Operator Overloading, example => '+ operator'
+
+int a = 5;
+int b = 6;
+
+String first = "Java ";
+String second = "Programming";
+
+// + with numbers
+int sum = a + b;  // Output = 11
+
+// + with strings
+name = first + second;  // Output = Java Programming
